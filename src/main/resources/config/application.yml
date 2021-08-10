@@ -1,0 +1,10 @@
+name: welcome-app
+description: This is my first app
+
+spring:
+  profiles:
+    active: dev
+
+management.endpoint.metrics.enabled: true
+management.endpoints.web.exposure.include: health, info
+management.endpoint.health.show-details: always

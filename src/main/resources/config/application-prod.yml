@@ -1,0 +1,4 @@
+spring:
+  profiles: prod
+  officialGreeting: Good Morning in production profile
+  unofficialGreeting: Hello in production profile

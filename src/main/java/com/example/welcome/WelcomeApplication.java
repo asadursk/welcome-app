@@ -12,10 +12,10 @@ public class WelcomeApplication implements CommandLineRunner {
 	@Autowired
 	private CustomConfig myConfig;
 
-	@Value("${description}")
+	@Value("${spring.description}")
 	private String description;
 
-	@Value("${name}")
+	@Value("${spring.name}")
 	private String name;
 
 	public static void main(String[] args) {

@@ -1,7 +1,6 @@
-name: welcome-app
-description: This is my first app
-
 spring:
+  name: welcome-app
+  description: This is my first app
   profiles:
     active: dev
 

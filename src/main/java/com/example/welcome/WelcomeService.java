@@ -6,11 +6,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class WelcomeService {
     @Autowired
-    private CustomConfig myConfig;
+    private WelcomeMessagesConfiguration welcomeMessagesConfiguration;
 
     public String officialGreeting(String name) {
-        return this.myConfig.getOfficialGreeting() + " " + name;
+        return welcomeMessagesConfiguration.getOfficialGreeting() + " " + name;
     }
 
-    public String unofficialGreeting(String name) { return this.myConfig.getUnofficialGreeting()+ " " + name; }
+    public String unofficialGreeting(String name) {
+        return welcomeMessagesConfiguration.getUnofficialGreeting()+ " " + name;
+    }
 }

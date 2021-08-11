@@ -10,13 +10,12 @@ public class WelcomeController {
     private WelcomeService welcomeService;
 
     @GetMapping("/official")
-    @ResponseBody
-    public CustomResponse officialGreeting(@RequestParam String name) {
-        return new CustomResponse(welcomeService.officialGreeting(name), "/official");
+    public ResponseDTO officialGreeting(@RequestParam String name) {
+        return new ResponseDTO(welcomeService.officialGreeting(name), "/official");
     }
 
     @GetMapping("/unofficial")
-    public CustomResponse unofficialGreeting(@RequestParam String name) {
-        return new CustomResponse(welcomeService.unofficialGreeting(name), "/unofficial");
+    public ResponseDTO unofficialGreeting(@RequestParam String name) {
+        return new ResponseDTO(welcomeService.unofficialGreeting(name), "/unofficial");
     }
 }

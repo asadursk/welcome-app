@@ -2,8 +2,17 @@ spring:
   name: welcome-app
   description: This is my first app
   profiles:
-    active: dev
+    active:
+  officialGreeting: Good Morning
+  unofficialGreeting: Hello
 
-management.endpoint.metrics.enabled: true
-management.endpoints.web.exposure.include: health, info
-management.endpoint.health.show-details: always
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, info

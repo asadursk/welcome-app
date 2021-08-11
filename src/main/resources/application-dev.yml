@@ -1,4 +1,6 @@
 spring:
-  profiles: dev
+  config:
+    active:
+      on-profiles: dev
   officialGreeting: Good Morning in developer profile
   unofficialGreeting: Hello in developer profile

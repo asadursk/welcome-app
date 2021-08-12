@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class WelcomeApplication {
 
-	@Value("${spring.description}")
+	@Value("${application.description}")
 	private String description;
 
-	@Value("${spring.name}")
+	@Value("${application.name}")
 	private String name;
 
 	public static void main(String[] args) {

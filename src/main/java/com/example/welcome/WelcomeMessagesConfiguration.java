@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @Getter
 @Configuration
 @EnableConfigurationProperties
-@ConfigurationProperties(prefix = "spring")
+@ConfigurationProperties(prefix = "application")
 public class WelcomeMessagesConfiguration {
 
     private String officialGreeting;

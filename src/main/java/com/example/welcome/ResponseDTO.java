@@ -12,11 +12,15 @@ public class ResponseDTO {
 
     private final String endpoint;
 
-    ResponseDTO(String content, String endpoint) {
+    ResponseDTO(String content, GreetingType greetingType) {
         Date date = new Date();
 
         this.content = content;
-        this.endpoint = endpoint;
+        this.endpoint = endpointFormat(greetingType);
         this.datetime = new Timestamp(date.getTime());
+    }
+
+    private String endpointFormat(GreetingType greetingType) {
+        return "/" + greetingType.toString().toLowerCase();
     }
 }

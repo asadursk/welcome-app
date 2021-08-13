@@ -11,11 +11,11 @@ public class WelcomeController {
 
     @GetMapping("/official")
     public ResponseDTO officialGreeting(@RequestParam String name) {
-        return new ResponseDTO(welcomeService.officialGreeting(name), "/official");
+        return welcomeService.officialGreeting(name);
     }
 
     @GetMapping("/unofficial")
     public ResponseDTO unofficialGreeting(@RequestParam String name) {
-        return new ResponseDTO(welcomeService.unofficialGreeting(name), "/unofficial");
+        return welcomeService.unofficialGreeting(name);
     }
 }

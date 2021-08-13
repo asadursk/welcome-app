@@ -8,11 +8,11 @@ public class WelcomeService {
     @Autowired
     private WelcomeMessagesConfiguration welcomeMessagesConfiguration;
 
-    public String officialGreeting(String name) {
-        return welcomeMessagesConfiguration.getOfficialGreeting() + " " + name;
+    public ResponseDTO officialGreeting(String name) {
+        return new ResponseDTO(welcomeMessagesConfiguration.getOfficialGreeting() + " " + name, GreetingType.OFFICIAL);
     }
 
-    public String unofficialGreeting(String name) {
-        return welcomeMessagesConfiguration.getUnofficialGreeting()+ " " + name;
+    public ResponseDTO unofficialGreeting(String name) {
+        return new ResponseDTO(welcomeMessagesConfiguration.getUnofficialGreeting()+ " " + name, GreetingType.UNOFFICIAL);
     }
 }

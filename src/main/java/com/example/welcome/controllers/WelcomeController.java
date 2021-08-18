@@ -1,21 +1,23 @@
-package com.example.welcome;
+package com.example.welcome.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.welcome.models.ResponseDTO;
+import com.example.welcome.services.WelcomeService;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@AllArgsConstructor
 @RequestMapping("/welcome")
 public class WelcomeController {
-    @Autowired
     private WelcomeService welcomeService;
 
     @GetMapping("/official")
     public ResponseDTO officialGreeting(@RequestParam String name) {
-        return welcomeService.officialGreeting(name);
+        return welcomeService.getOfficialGreeting(name);
     }
 
     @GetMapping("/unofficial")
     public ResponseDTO unofficialGreeting(@RequestParam String name) {
-        return welcomeService.unofficialGreeting(name);
+        return welcomeService.getUnofficialGreeting(name);
     }
 }
